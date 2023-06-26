@@ -2,7 +2,7 @@ name: xUnit test
 
 on:
   push:
-    branches: ["test"]
+    branches: ["feature/xUnit"]
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Test
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
-
+      
       - name: BuildXUnixTest
         run: dotnet build XUnit.Coverage.sln
         
