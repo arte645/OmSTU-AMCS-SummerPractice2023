@@ -92,6 +92,6 @@ public class UnitTest1
         var SquareEquation = new SquareEquation();
 
         double[] result = SquareEquation.Solve(a,b,c);
-        Assert.Equal(result.Length, 0);
+        Assert.Equal(0, result.Length);
     }
 }
