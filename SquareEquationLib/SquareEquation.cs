@@ -13,26 +13,36 @@ public class SquareEquation
             throw new System.ArgumentException();
         }
 
-        b = b / a;
-        c = c / a;
-
-        double discriminant = Math.Pow(b,2) - 4 * c ;
-
-        if (discriminant <= -e)
+        if (Math.Abs(b)>e)
         {
-            solution = new double[0];
+            b = b / a;
+            c = c / a;
+
+            double discriminant = Math.Pow(b,2) - 4 * c ;
+
+            if (discriminant <= -e)
+            {
+                solution = new double[0];
+            }
+            else if (discriminant < e && discriminant>-e)
+            {
+                solution = new double[1];
+                solution[0]= -b / 2;
+            }
+            else
+            {
+                solution = new double[2];
+                solution[0] = -(b + Math.Sign(b) * Math.Sqrt(discriminant)) / 2;
+                solution[1] = c / solution[0];
+            }
         }
-        else if (discriminant < e && discriminant>-e)
-        {
-            solution = new double[1];
-            solution[0]= -b / 2;
-        }
-        else
+        else if (c<=e)
         {
             solution = new double[2];
-            solution[0] = -(b + Math.Sign(b) * Math.Sqrt(discriminant)) / 2;
-            solution[1] = c / solution[0];
+            solution[0] = Math.Pow(Math.Abs(c),0.5);
+            solution[1] = -Math.Pow(Math.Abs(c),0.5);
         }
+        else solution= new double[0];
 
         return solution;
     }
