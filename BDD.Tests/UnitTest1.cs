@@ -9,7 +9,7 @@ namespace UnitTes1
         private double a;
         private double b;
         private double c;
-        public void Input(ScenarioContext input)
+        public BDD(ScenarioContext input)
         {
             scenarioContext = input;
         }
