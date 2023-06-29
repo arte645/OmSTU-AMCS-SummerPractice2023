@@ -30,3 +30,6 @@ jobs:
         
       - name: XUnitTest
         run: dotnet test /p:CollectCoverage=true
+
+      - name: BDD.Tests
+        run: dotnet test /p:CollectCoverage=true
