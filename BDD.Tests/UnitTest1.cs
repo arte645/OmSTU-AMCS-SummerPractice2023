@@ -99,17 +99,9 @@ namespace UnitTes1
             var SquareEquation = new SquareEquation();
             double[] result = SquareEquation.Solve(a,b,c);
 
-            bool rightSolution = true;
-            double e = 1e-8;
+            double[] expected = new double[] {koef1, koef2};
 
-            foreach(var i in result)
-            {
-                if(Math.Abs(a*Math.Pow(i,2)+b*i+c)>e)
-                {
-                    rightSolution=false;
-                }            
-            }
-            Assert.True(rightSolution);
+            Assert.Equal(expected, result);
         }
 
         [Then(@"квадратное уравнение имеет один корень (.*) кратности два")]
@@ -118,18 +110,9 @@ namespace UnitTes1
             var SquareEquation = new SquareEquation();
 
             double[] result = SquareEquation.Solve(a,b,c);
+            double[] expected = new double[] {koef1};
 
-            bool rightSolution = true;
-            double e = 1e-8;
-
-            foreach(var i in result)
-            {
-                if(Math.Abs(a*Math.Pow(i,2)+b*i+c)>e)
-                {
-                    rightSolution=false;
-                }            
-            }
-            Assert.True(rightSolution);
+            Assert.Equal(expected, result);
          }
 
          [Then(@"множество корней квадратного уравнения пустое")]
