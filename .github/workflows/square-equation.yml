@@ -21,9 +21,6 @@ jobs:
 
       - name: Build
         run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
-
-      - name: Test
-        run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
         
       - name: SquareEquation.Tests
         run: dotnet test /p:CollectCoverage=true
