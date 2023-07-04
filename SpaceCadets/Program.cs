@@ -14,8 +14,8 @@ public class Program
 
     public static void Main(string[] args)
     {
-        string input_path = $"/home/ubuntu/OmSTU-AMCS-SummerPractice2023-4/SpaceCadets/input.json";
-        string output_path = $"/home/ubuntu/OmSTU-AMCS-SummerPractice2023-4/SpaceCadets/output.json";
+        string input_path = args[0];
+        string output_path = args[1];
 
         string file = File.ReadAllText(input_path);
 
