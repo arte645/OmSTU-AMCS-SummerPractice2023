@@ -6,9 +6,10 @@ namespace UnitTes1
     public class BDD
     {
         private ScenarioContext scenarioContext;
-        private double a;
-        private double b;
-        private double c;
+        private double a = 0;
+        private double b = 0;
+        private double c = 0;
+        public double[] result = new double[2];
         public BDD(ScenarioContext input)
         {
             scenarioContext = input;
@@ -88,7 +89,7 @@ namespace UnitTes1
         public void try_to_solve()
         {
             try{
-                var result = SquareEquation.Solve(a,b,c);
+                result = SquareEquation.Solve(a,b,c);
             }
             catch{
             }
@@ -96,9 +97,6 @@ namespace UnitTes1
        [Then(@"квадратное уравнение имеет два корня \((.*), (.*)\) кратности один")]
         public void Test_for_two_roots(double koef1, double koef2)
         {
-            var SquareEquation = new SquareEquation();
-            double[] result = SquareEquation.Solve(a,b,c);
-
             double[] expected = new double[] {koef1, koef2};
 
             Assert.Equal(expected, result);
@@ -107,9 +105,6 @@ namespace UnitTes1
         [Then(@"квадратное уравнение имеет один корень (.*) кратности два")]
          public void Test_for_one_root(double koef1)
          {
-            var SquareEquation = new SquareEquation();
-
-            double[] result = SquareEquation.Solve(a,b,c);
             double[] expected = new double[] {koef1};
 
             Assert.Equal(expected, result);
@@ -118,25 +113,13 @@ namespace UnitTes1
          [Then(@"множество корней квадратного уравнения пустое")]
          public void Test_for_no_roots()
          {
-            var SquareEquation = new SquareEquation();
-
-            double[] result = SquareEquation.Solve(a,b,c);
             Assert.Empty(result);
          }
 
          [Then(@"выбрасывается исключение ArgumentException")]
          public void Test_for_Exception()
          {
-            var argExc= new ArgumentException();
-
-            try
-            {
-                var result = SquareEquation.Solve(a,b,c);
-            }
-            catch (Exception ex)
-            {
-                Assert.Equal(ex.GetType(), argExc.GetType());
-            }
+            Assert.Throws<System.ArgumentException>(() => SquareEquation.Solve(a, b, c));
          }
     }
 }

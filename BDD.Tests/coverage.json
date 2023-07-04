@@ -1,44 +1,44 @@
 {
   "SquareEquationLib.dll": {
-    "/home/ubuntu/OmSTU-AMCS-SummerPractice2023-1/SquareEquationLib/SquareEquation.cs": {
+    "/home/ubuntu/OmSTU-AMCS-SummerPractice2023-5/SquareEquationLib/SquareEquation.cs": {
       "SquareEquationLib.SquareEquation": {
         "System.Double[] SquareEquationLib.SquareEquation::Solve(System.Double,System.Double,System.Double)": {
           "Lines": {
-            "6": 26,
-            "8": 26,
-            "10": 26,
-            "11": 26,
-            "12": 18,
-            "13": 18,
-            "16": 8,
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "21": 2,
-            "23": 2,
+            "6": 23,
+            "8": 23,
+            "10": 23,
+            "11": 23,
+            "12": 20,
+            "13": 20,
+            "16": 3,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "23": 1,
             "24": 0,
             "25": 0,
             "26": 0,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2,
-            "31": 2,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
             "33": 0,
             "34": 0,
             "35": 0,
             "36": 0,
             "37": 0,
-            "38": 2,
-            "39": 6,
-            "40": 2,
-            "41": 2,
-            "42": 2,
-            "43": 2,
-            "44": 2,
-            "45": 4,
-            "47": 8,
-            "48": 8
+            "38": 1,
+            "39": 2,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "47": 3,
+            "48": 3
           },
           "Branches": [
             {
@@ -47,7 +47,7 @@
               "EndOffset": 15,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 4
             },
             {
               "Line": 10,
@@ -55,7 +55,7 @@
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 26
+              "Hits": 21
             },
             {
               "Line": 10,
@@ -63,7 +63,7 @@
               "EndOffset": 20,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 26
+              "Hits": 21
             },
             {
               "Line": 10,
@@ -71,7 +71,7 @@
               "EndOffset": 28,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 22
+              "Hits": 17
             },
             {
               "Line": 10,
@@ -79,7 +79,7 @@
               "EndOffset": 36,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 18
+              "Hits": 13
             },
             {
               "Line": 10,
@@ -87,7 +87,7 @@
               "EndOffset": 44,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 14
+              "Hits": 9
             },
             {
               "Line": 10,
@@ -95,7 +95,7 @@
               "EndOffset": 52,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 12
+              "Hits": 7
             },
             {
               "Line": 10,
@@ -103,7 +103,7 @@
               "EndOffset": 60,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 10
+              "Hits": 5
             },
             {
               "Line": 10,
@@ -111,7 +111,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -119,7 +119,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -127,7 +127,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -135,7 +135,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -143,7 +143,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -151,7 +151,7 @@
               "EndOffset": 68,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 16
+              "Hits": 18
             },
             {
               "Line": 10,
@@ -159,7 +159,7 @@
               "EndOffset": 73,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 18
+              "Hits": 20
             },
             {
               "Line": 10,
@@ -167,7 +167,7 @@
               "EndOffset": 80,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 8
+              "Hits": 3
             },
             {
               "Line": 16,
@@ -175,7 +175,7 @@
               "EndOffset": 96,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 2
+              "Hits": 1
             },
             {
               "Line": 23,
@@ -191,7 +191,7 @@
               "EndOffset": 162,
               "Path": 1,
               "Ordinal": 19,
-              "Hits": 2
+              "Hits": 1
             },
             {
               "Line": 27,
@@ -199,7 +199,7 @@
               "EndOffset": 167,
               "Path": 0,
               "Ordinal": 20,
-              "Hits": 2
+              "Hits": 1
             },
             {
               "Line": 27,
@@ -215,7 +215,7 @@
               "EndOffset": 182,
               "Path": 0,
               "Ordinal": 22,
-              "Hits": 2
+              "Hits": 1
             },
             {
               "Line": 27,
@@ -231,7 +231,7 @@
               "EndOffset": 259,
               "Path": 1,
               "Ordinal": 17,
-              "Hits": 6
+              "Hits": 2
             },
             {
               "Line": 39,
@@ -239,7 +239,7 @@
               "EndOffset": 272,
               "Path": 0,
               "Ordinal": 24,
-              "Hits": 2
+              "Hits": 1
             },
             {
               "Line": 39,
@@ -247,7 +247,7 @@
               "EndOffset": 330,
               "Path": 1,
               "Ordinal": 25,
-              "Hits": 4
+              "Hits": 1
             }
           ]
         }
