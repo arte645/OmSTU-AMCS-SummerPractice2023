@@ -3,13 +3,14 @@ using TechTalk.SpecFlow;
 namespace spacebattletests
 {
     [Binding]
-    public class spacebattletests
+    public class Spacebattletests
     {
         private ScenarioContext scenarioContext;
-        private double[] position;
-        private double[] speed;
+        private double[] position = new double[2];
+        private double[] speed= new double[2];
         public bool can_move = true;
-        public spacebattletests(ScenarioContext input)
+        public double[] result = new double[2];
+        public Spacebattletests(ScenarioContext input)
         {
             scenarioContext = input;
         }
@@ -49,7 +50,7 @@ namespace spacebattletests
         public void try_to_solve()
         {
             try{
-                var result = Spacebattle.FindPosition(position, speed,can_move);
+                result = Spacebattle.FindPosition(position, speed,can_move);
             }
             catch{
             }
@@ -58,23 +59,16 @@ namespace spacebattletests
        [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
         public void Test_for_normal_position(double koef3, double koef4)
         {
-            double[] result = Spacebattle.FindPosition(position, speed, can_move);
             double[] excepted = new double[] {koef3, koef4};
 
-            Assert.Equal(excepted, result);
+            for(int i = 0;i<result.Length;i++)
+                Assert.Equal(excepted[i], result[i]);
         }
 
         [Then(@"возникает ошибка Exception")]
          public void Test_for_get_stuck_in_textures()
          {
-            try
-            {
-                double[] result = Spacebattle.FindPosition(position, speed, can_move);
-            }
-            catch
-            {
-                Assert.True(true);
-            }
+            Assert.Throws<Exception>(() => Spacebattle.FindPosition(position, speed,can_move));
          }
     }
 }
