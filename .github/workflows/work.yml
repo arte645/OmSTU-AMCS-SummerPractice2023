@@ -20,7 +20,7 @@ jobs:
         run: dotnet restore spacebattle
 
       - name: Test Build
-        run: dotnet build Default_spaceship_game --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build Default_game --no-restore /p:ContinuousIntegrationBuild=true
 
       - name: Run
-        run: cd Default_spaceship_game/Game && dotnet run
+        run: cd Default_game && dotnet run
