@@ -19,4 +19,37 @@ public class Spacebattle
         else throw new System.Exception();
         return result; 
     }
+    public static double FindAngle(double angel, double delta_angle)
+    {
+        double result;
+        try{
+            result = angel+delta_angle;
+        }
+        catch
+        {
+            throw new System.Exception();
+        }
+        if(result>0)
+        {
+            return result;
+        }
+        else throw new System.Exception();
+    }
+    public static double FindFuel(double fuel, double delta_fuel)
+    {
+        double result;
+        try
+        {
+            result = fuel-delta_fuel;
+        }
+        catch
+        {
+            throw new System.Exception();
+        }
+        if(result>0)
+        {
+            return result;
+        }
+        else throw new System.Exception();
+    }
 }
