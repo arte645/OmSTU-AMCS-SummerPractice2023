@@ -6,13 +6,15 @@ namespace spacebattletests
     public class Spacebattletests
     {
         private ScenarioContext scenarioContext;
-        private double[] position;
-        private double[] speed;
+        private double[] position= new double[2];
+        private double[] speed= new double[2];
         public bool can_move = true;
-        private double fuel;
-        private double delta_fuel;
-        private double angle;
-        private double delta_angle;
+        private double fuel=double.NaN;
+        private double delta_fuel=double.NaN;
+        private double angle=double.NaN;
+        private double delta_angle=double.NaN;
+        double[] result = new double[2];
+        double resultFuel_or_Angle = double.NaN;
         public Spacebattletests(ScenarioContext input)
         {
             scenarioContext = input;
@@ -89,28 +91,23 @@ namespace spacebattletests
          [When(@"происходит прямолинейное равномерное движение без деформации")]
         public void try_to_FindFuel()
         {
-            if(fuel!=double.NaN || delta_fuel!=double.NaN)
-            {
-                try{
-                    var result = Spacebattle.FindFuel(fuel, delta_fuel);
-                }
-                catch{
-                }
+            try{
+                resultFuel_or_Angle = Spacebattle.FindFuel(fuel, delta_fuel);
             }
-            else
-            {
-                try{
-                var result = Spacebattle.FindPosition(position, speed,can_move);
-                }
-                catch{
-                }
+            catch{
+            }
+            
+            try{
+                result = Spacebattle.FindPosition(position, speed,can_move);
+            }
+            catch{
             }
         }
         [When(@"происходит вращение вокруг собственной оси")]
         public void try_to_Findangle()
         {
             try{
-                var result = Spacebattle.FindAngle(angle, delta_angle);
+                resultFuel_or_Angle = Spacebattle.FindAngle(angle, delta_angle);
             }
             catch{
             }
@@ -119,7 +116,6 @@ namespace spacebattletests
        [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
         public void Test_for_normal_position(double koef3, double koef4)
         {
-            double[] result = Spacebattle.FindPosition(position, speed, can_move);
             double[] excepted = new double[] {koef3, koef4};
 
             Assert.Equal(excepted, result);
@@ -127,18 +123,16 @@ namespace spacebattletests
         [Then(@"новый объем топлива космического корабля равен (.*) ед")]
         public void Test_for_normal_fuel(double koef3)
         {
-            double result = Spacebattle.FindFuel(fuel, delta_fuel);
             double excepted = koef3;
 
-            Assert.Equal(excepted, result);
+            Assert.Equal(excepted, resultFuel_or_Angle);
         }
         [Then(@"угол наклона космического корабля к оси OX составляет (.*) град")]
         public void Test_for_normal_angle(double koef3)
         {
-            double result = Spacebattle.FindAngle(angle, delta_angle);
             double excepted = koef3;
 
-        Assert.Equal(excepted, result);
+            Assert.Equal(excepted, resultFuel_or_Angle);
         }
 
         [Then(@"возникает ошибка Exception")]
@@ -146,36 +140,15 @@ namespace spacebattletests
          {
             if(fuel!=double.NaN || delta_fuel!=double.NaN)
             {
-                try
-                {
-                    double result = Spacebattle.FindFuel(fuel, delta_fuel);
-                }
-                catch
-                {
-                    Assert.True(true);
-                }
+                 Assert.Throws<Exception>(() => Spacebattle.FindFuel(fuel, delta_fuel));
             }
             else if(angle!=double.NaN || delta_angle!=double.NaN)
             {
-                try
-                {
-                    double result = Spacebattle.FindAngle(angle, delta_angle);
-                }
-                catch
-                {
-                    Assert.True(true);
-                }
+                 Assert.Throws<Exception>(() => Spacebattle.FindAngle(angle, delta_angle));
             }
             else
             {
-                try
-                {
-                    double[] result = Spacebattle.FindPosition(position, speed, can_move);
-                }
-                catch
-                {
-                    Assert.True(true);
-                }
+                 Assert.Throws<Exception>(() => Spacebattle.FindPosition(position, speed,can_move));
             }
         }
     }
