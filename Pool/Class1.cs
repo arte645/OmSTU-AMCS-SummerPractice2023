@@ -38,12 +38,7 @@ public class Pool<T> where T : new()
 
     public void Get_back_to_pool(T pool_object)
     {
-        if(pool.Count == count)
-            throw new Exception("Cant add new spaceship, pool is full.");
-        else
-        {
             pool.Enqueue(pool_object);
-        }
     }
 }
 
