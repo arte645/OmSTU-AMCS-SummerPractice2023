@@ -1,6 +1,6 @@
 {
   "SquareEquationLib.dll": {
-    "/home/ubuntu/OmSTU-AMCS-SummerPractice2023-5/SquareEquationLib/SquareEquation.cs": {
+    "/home/ubuntu/OmSTU-AMCS-SummerPractice2023-6/SquareEquationLib/SquareEquation.cs": {
       "SquareEquationLib.SquareEquation": {
         "System.Double[] SquareEquationLib.SquareEquation::Solve(System.Double,System.Double,System.Double)": {
           "Lines": {

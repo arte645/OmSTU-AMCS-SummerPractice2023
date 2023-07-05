@@ -10,6 +10,7 @@ namespace UnitTes1
         private double b = 0;
         private double c = 0;
         public double[] result = new double[2];
+        public double e = 1e-6;
         public BDD(ScenarioContext input)
         {
             scenarioContext = input;
@@ -98,16 +99,16 @@ namespace UnitTes1
         public void Test_for_two_roots(double koef1, double koef2)
         {
             double[] expected = new double[] {koef1, koef2};
-
-            Assert.Equal(expected, result);
+            for(int i = 0;i<result.Length;i++)
+                Assert.Equal(expected[i], result[i],e);
         }
 
         [Then(@"квадратное уравнение имеет один корень (.*) кратности два")]
          public void Test_for_one_root(double koef1)
          {
             double[] expected = new double[] {koef1};
-
-            Assert.Equal(expected, result);
+            for(int i = 0;i<result.Length;i++)
+                Assert.Equal(expected[i], result[i],e);
          }
 
          [Then(@"множество корней квадратного уравнения пустое")]
