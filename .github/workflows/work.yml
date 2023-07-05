@@ -2,7 +2,7 @@ name: spacebattle_conflict
 
 on:
   push:
-    branches: ["space_conflict"]
+    branches: ["Spaceship_Pool"]
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         run: dotnet restore spacebattle
 
       - name: Test Build
-        run: dotnet build spacebattle --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build Default_game --no-restore /p:ContinuousIntegrationBuild=true
 
-      - name: DBB test
-        run: cd spacebattletests && dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+      - name: Run
+        run: cd Default_game && dotnet run
