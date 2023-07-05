@@ -1,0 +1,59 @@
+SF:/home/ubuntu/OmSTU-AMCS-SummerPractice2023-6/spacebattle/spacebattle.cs
+FN:4,System.Double[] spacebattle.Spacebattle::FindPosition(System.Double[],System.Double[],System.Boolean)
+FNDA:6,System.Double[] spacebattle.Spacebattle::FindPosition(System.Double[],System.Double[],System.Boolean)
+DA:5,6
+DA:6,6
+DA:7,6
+DA:8,5
+DA:10,5
+DA:11,5
+DA:12,3
+DA:13,3
+DA:14,2
+DA:15,2
+DA:16,2
+DA:18,3
+DA:19,1
+DA:20,3
+DA:21,3
+BRDA:7,11,0,5
+BRDA:7,11,1,1
+FN:22,System.Double spacebattle.Spacebattle::FindAngle(System.Double,System.Double)
+FNDA:4,System.Double spacebattle.Spacebattle::FindAngle(System.Double,System.Double)
+DA:23,4
+DA:25,4
+DA:26,4
+DA:27,4
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,4
+DA:33,1
+DA:34,1
+DA:36,3
+DA:37,1
+BRDA:32,31,0,1
+BRDA:32,31,1,3
+FN:38,System.Double spacebattle.Spacebattle::FindFuel(System.Double,System.Double)
+FNDA:13,System.Double spacebattle.Spacebattle::FindFuel(System.Double,System.Double)
+DA:39,13
+DA:42,13
+DA:43,13
+DA:44,13
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,13
+DA:50,1
+DA:51,1
+DA:53,12
+DA:54,1
+BRDA:49,31,0,1
+BRDA:49,31,1,12
+LF:39
+LH:33
+BRF:6
+BRH:6
+FNF:3
+FNH:3
+end_of_record
